@@ -4,19 +4,46 @@
     <head>
 
         <style>
-        body {
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+        .the-content{
+            
+        }
+
+        .the-content {
+            position: relative;
+            z-index: 1; 
+            color: #1e272e; 
+            text-shadow: 0px 1px 2px rgba(255,255,255,0.8);
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index:0;
+        }
+
+        html, body {
+            font-family: sans-serif;
             margin: 0;
-            background-image: url("images/background.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            color: rgb(239, 237, 237);
-            font-family: Arial, sans-serif;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+
+        .block-a{
+            margin-left: 10px;
+            margin-right: 20px;
+            text-indent: 1em;
         }
 
         a {
-            color: #00bfff;
+            color: #0984e3;
         }
         </style>
 
@@ -26,14 +53,21 @@
     </head>
 
     <body>
-        <h1>Giới thiệu về tôi</h1>
-        <p>
-            Xin chào, tôi tên là Phạm Xuân Thắng. Tôi là sinh viên ngành Công nghệ Thông tin, hiện đang theo học tại Học viện Công nghệ Bưu Chinh Viễn Thông . Tôi có nền tảng kiến thức về lập trình, cơ sở dữ liệu và mạng máy tính, đồng thời luôn chủ động tìm hiểu thêm các công nghệ mới để nâng cao kỹ năng chuyên môn. Tôi là người có tinh thần trách nhiệm, làm việc nghiêm túc và có khả năng học hỏi nhanh. Trong tương lai, tôi mong muốn phát triển theo hướng kỹ sư phần mềm và tham gia vào các dự án thực tế có giá trị.
-        </p>
 
-        <p>
-            Liên hệ với tôi 
-            <a href="https://www.facebook.com/clark1337x/" target="_blank" rel="noopener noreferrer">tại đây</a>
-        </p>
+        <video autoplay muted loop playsinline id="bg-video">
+        <source src="videos/bgvideo.mp4" type="video/mp4">
+        </video>
+
+        <div class="the-content">
+            <h1 style="margin-left: 500px">About me</h1>
+            <p class="block-a">
+                Xin chào, tôi tên là Phạm Xuân Thắng. Tôi là sinh viên ngành Công nghệ Thông tin, hiện đang theo học tại Học viện Công nghệ Bưu Chinh Viễn Thông . Tôi có nền tảng kiến thức về lập trình, cơ sở dữ liệu và mạng máy tính, đồng thời luôn chủ động tìm hiểu thêm các công nghệ mới để nâng cao kỹ năng chuyên môn. Tôi là người có tinh thần trách nhiệm, làm việc nghiêm túc và có khả năng học hỏi nhanh. Trong tương lai, tôi mong muốn phát triển theo hướng kỹ sư phần mềm và tham gia vào các dự án thực tế có giá trị.
+            </p>
+
+            <p style="padding-left: 10px">
+                Liên hệ với tôi 
+                <a href="https://www.facebook.com/clark1337x/" target="_blank" rel="noopener noreferrer">tại đây</a>
+            </p>
+        </div>
     </body>
 </html>
