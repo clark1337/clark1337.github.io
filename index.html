@@ -1,105 +1,194 @@
 <!DOCTYPE html>
+<html lang="vi">
+<head>
 
-<html lang="vi">  
-    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap');
+    <title>Giới thiệu bản thân</title>
 
-        .navbar {
-            position: fixed;
-            top: 1000;
-            left: 10000;
+    <style>
 
-            width: 100%;
-            height: 70px;
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap');
 
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
+    * {
+        box-sizing: border-box;
+    }
 
-            background: rgba(0,0,0,0.95);
-            backdrop-filter: blur(8px);
+    body {
+        font-family: 'Quicksand', sans-serif;
+        margin: 0;
+        padding-top: 60px;
+        background: black;
+        color: white;
+    }
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+    /* ================= NAV ================= */
 
-            z-index: 1000;
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        padding: 12px 0;
+
+        display: flex;
+        justify-content: center;
+
+        background: rgba(100,100,100,0.95);
+        backdrop-filter: blur(8px);
+
+        z-index: 1000;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 35px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: rgba(255,255,255,0.7);
+        font-size: 15px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: white;
+    }
+
+    /* ================= LAYOUT ================= */
+
+    .About {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .intro {
+        display: flex;
+        align-items: center;
+    }
+
+    .intro-text {
+        flex: 1;
+    }
+
+    .intro-text h1 {
+        font-size: 70px;
+        margin: 0;
+        font-weight: 900;
+    }
+
+    .intro-text h2 {
+        font-size: 50px;
+        margin: 1px 0 40px;
+    }
+
+    .in4 {
+        font-family: 'IBM Plex Mono';
+        line-height: 1.7;
+        max-width: 600px;
+    }
+
+    .avt {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    /* ================= BACKGROUND VIDEO ================= */
+
+    .bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        z-index: -2;
+        overflow: hidden;
+    }
+
+    .bg-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 768px) {
+
+        .intro {
+            flex-direction: column;
+            text-align: center;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 35px;
+        .intro-text h1 {
+            font-size: 48px;
         }
 
-        .nav-links a {
-            text-decoration: none;
-
-            color: rgba(255,255,255,0.7);
-            font-size: 15px;
-            font-weight: 500;
-
-            transition: 0.3s;
+        .intro-text h2 {
+            font-size: 36px;
         }
 
-        .nav-links a:hover {
-            color: #ffffff;
+        .in4 {
+            max-width: 100%;
         }
 
-        .the-content {
-            position: relative;
-            z-index: 1; 
-            color: white; 
-            text-shadow: 0px 1px 2px rgba(255,255,255,0.8);
-        }
+    }
 
+    </style>
 
-        html, body {
-            font-family: 'Quicksand', sans-serif;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-        }
+</head>
 
-        .block-a{
-            font-family: 'IBM Plex Mono';
-            margin-left: 10px;
-            margin-right: 20px;
-            text-indent: 1em;
-        }
+<body>
 
-        a {
-            color: #0984e3;
-        }
-        </style>
+    <!-- ================= NAV ================= -->
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Giới thiệu bản thân</title>
-    </head>
-
-    <body>
-        <nav class="nav-bar">
-            <div class="nav-links">
-            <a href="#about">About</a>
+    <nav class="nav-bar">
+        <div class="nav-links">
+            <a href="#About">About</a>
             <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ================= CONTENT ================= -->
+
+    <div class="bg-video">
+        <video autoplay muted loop playsinline>
+            <source src="videos/bg2.mp4" type="video/mp4">
+        </video>
     </div>
-        </nav>
 
+    <div class="About" id="About">
 
-        <div class="the-content">
-            <h1 style="margin-left: 500px">Hi, it's</h1>
-            <h2>Thang Pham Xuan</h2>
-            <img src="images/avt.png" alt="avt">
+        <div class="intro">
 
-            <p class="block-a">
-                Hello, my name is Thang Pham Xuan. I am a student majoring in Information Technology, currently studying at the Posts and Telecommunications Institute of Technology. I have a strong foundation in programming, databases, and computer networks, and I am always proactive in learning new technologies to improve my professional skills. I am responsible, work diligently, and have the ability to learn quickly. In the future, I aspire to develop into a software engineer and participate in valuable real-world projects.
-            </p>
+            <div class="intro-text">
+
+                <h1>Hi, it's</h1>
+
+                <h2>Thang Pham Xuan</h2>
+
+                <p class="in4">
+                    I am a student majoring in Information Technology, currently studying at the Posts and Telecommunications Institute of Technology. I have a strong foundation in programming, databases, and computer networks, and I am always proactive in learning new technologies to improve my professional skills. I am responsible, work diligently, and have the ability to learn quickly. In the future, I aspire to develop into a software engineer and participate in valuable real-world projects.
+                </p>
+
+            </div>
+
+            <img src="images/avt.png" alt="Avatar" class="avt">
 
         </div>
-    </body>
+
+    </div>
+
+</body>
 </html>
